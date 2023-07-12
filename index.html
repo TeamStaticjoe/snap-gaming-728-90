@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.sd-gaming-728-90 {
+				width: 728px;
+				height: 90px;
+				background-color: #000;
+				position: relative;
+			}
+			.bg {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 728px;
+				height: 90;
+				z-index: 1;
+			}
+			.logo {
+				position: absolute;
+				z-index: 10;
+				right: 45px;
+				top: 20px;
+				visibility: hidden;
+			}
+			.pm {
+				position: absolute;
+				z-index: 10;
+				left: 45px;
+				top: 80px;
+			}
+		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	</head>
+	<body>
+		<div class="sd-gaming-728-90" width="728" height="90">
+			<img class="pm" src="assets/gaming-728-90-pm.png" alt="" />
+			<img class="logo" src="assets/gaming-728-90-logo.png" alt="" />
+			<img class="bg" src="assets/gaming-728-90-bg.png" alt="" />
+		</div>
+	</body>
+	<script>
+		logo = document.querySelector(".logo")
+		pm = document.querySelector(".pm")
+
+		const tl = gsap.timeline()
+
+		tl.set(logo, { autoAlpha: 0 })
+			.set(pm, { y: 80 })
+
+			.to(logo, { autoAlpha: 1, duration: 1, ease: "power4.inOut" })
+			.to(pm, { y: -70, duration: 2, ease: "power4.inOut" }, "-=50%")
+	</script>
+</html>
