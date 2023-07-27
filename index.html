@@ -40,15 +40,18 @@
 		</div>
 	</body>
 	<script>
-		logo = document.querySelector(".logo")
-		pm = document.querySelector(".pm")
+		const sdGaming728x90Animate = () => {
+			const logo = document.querySelector(".sd-gaming-728-90 .logo")
+			const pm = document.querySelector(".sd-gaming-728-90 .pm")
 
-		const tl = gsap.timeline()
+			const tl = gsap.timeline()
 
-		tl.set(logo, { autoAlpha: 0 })
-			.set(pm, { y: 80 })
+			tl.set(logo, { autoAlpha: 0 })
+				.set(pm, { y: 80 })
 
-			.to(logo, { autoAlpha: 1, duration: 1, ease: "power4.inOut" })
-			.to(pm, { y: -70, duration: 2, ease: "power4.inOut" }, "-=50%")
+				.to(logo, { autoAlpha: 1, duration: 1, ease: "power4.inOut" })
+				.to(pm, { y: -70, duration: 2, ease: "power4.inOut" }, "-=50%")
+		}
+		sdGaming728x90Animate()
 	</script>
 </html>
