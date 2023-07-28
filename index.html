@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="snap-gaming-728-90" content="width=728,height=90" />
+		<script type="text/javascript">
+			var clickTag = "https://www.qualcomm.com/de/snapdragon#gaming"
+		</script>
+
 		<style>
+			body,
+			html {
+				margin: 0;
+				padding: 0;
+			}
 			.sd-gaming-728-90 {
 				width: 728px;
 				height: 90px;
@@ -13,15 +23,16 @@
 				left: 0;
 				top: 0;
 				width: 728px;
-				height: 90;
+				height: 90px;
 				z-index: 1;
 			}
 			.logo {
 				position: absolute;
 				z-index: 10;
-				right: 45px;
+				width: 276;
+				height: 51;
+				left: 409px;
 				top: 20px;
-				visibility: hidden;
 			}
 			.pm {
 				position: absolute;
@@ -33,11 +44,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 	</head>
 	<body>
-		<div class="sd-gaming-728-90" width="728" height="90">
+		<a
+			href="javascript:window.open(window.clickTag)"
+			class="sd-gaming-728-90"
+			width="728"
+			height="90"
+		>
 			<img class="pm" src="assets/gaming-728-90-pm.png" alt="" />
 			<img class="logo" src="assets/gaming-728-90-logo.png" alt="" />
 			<img class="bg" src="assets/gaming-728-90-bg.png" alt="" />
-		</div>
+		</a>
 	</body>
 	<script>
 		const sdGaming728x90Animate = () => {
